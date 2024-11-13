@@ -5,7 +5,7 @@
 package QuanLyTaiLieu.Views;
 
 import QuanLyTaiLieu.Controllers.NguoiDungController;
-import QuanLyTaiLieu.Controllers.TaiLieuController;
+import QuanLyTaiLieu.Controllers.TaiLieuController1;
 import QuanLyTaiLieu.Models.TaiLieu;
 import java.io.File;
 import javax.swing.JFileChooser;
@@ -132,7 +132,7 @@ private String getFileExtension(File file) {
             NguoiDungController nguoiDungController = new NguoiDungController();
             String tenTaiKhoan = nguoiDungController.getTenTaiKhoanDangNhap();
 
-            TaiLieuController taiLieuController = new TaiLieuController();
+            TaiLieuController1 taiLieuController = new TaiLieuController1();
             for (File file : selectedFiles) {
                 if (file.isFile()) {
                     String filePath = file.getAbsolutePath();
@@ -183,7 +183,7 @@ private String getFileExtension(File file) {
             NguoiDungController nguoiDungController = new NguoiDungController();
             String tenTaiKhoan = nguoiDungController.getTenTaiKhoanDangNhap();
 
-            TaiLieuController taiLieuController = new TaiLieuController();
+            TaiLieuController1 taiLieuController = new TaiLieuController1();
             for (File file : files) {
                 if (file.isFile()) {
                     String filePath = file.getAbsolutePath();

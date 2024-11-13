@@ -4,6 +4,7 @@
  */
 package hethongquanlytailieu;
 
+import QuanLyTaiLieu.Views.FormNguoiDung;
 import QuanLyTaiLieu.Views.TrangCho;
 
 /**
@@ -16,7 +17,7 @@ public class HeThongQuanLyTaiLieu {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       TrangCho mainForm = new TrangCho();
+        FormNguoiDung mainForm = new FormNguoiDung();
        mainForm.setVisible(true);
     }
     

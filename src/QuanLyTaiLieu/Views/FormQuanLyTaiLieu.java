@@ -4,7 +4,7 @@
  */
 package QuanLyTaiLieu.Views;
 
-import QuanLyTaiLieu.Controllers.TaiLieuController;
+import QuanLyTaiLieu.Controllers.TaiLieuController1;
 import QuanLyTaiLieu.Controllers.ThungRacController;
 import QuanLyTaiLieu.Models.TaiLieu;
 import QuanLyTaiLieu.Models.ThungRac;
@@ -485,7 +485,7 @@ public void openDocument(String filePath) {
         tl.setKichCo(kichCo);
         tl.setLoai(loai);
 
-        TaiLieuController tailieuController = new TaiLieuController();
+        TaiLieuController1 tailieuController = new TaiLieuController1();
         if (tailieuController.CapNhatTaiLieu(tl) > 0) {
             HienThiTaiLieu(); // Cập nhật lại bảng
             JOptionPane.showMessageDialog(this, "Thông tin tài liệu đã được cập nhật!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
@@ -547,7 +547,7 @@ public void openDocument(String filePath) {
 
        try
         {
-            TaiLieuController tailieuController = new TaiLieuController();
+            TaiLieuController1 tailieuController = new TaiLieuController1();
             dstl = tailieuController.docTaiLieu();
             DefaultTableModel dftbl = (DefaultTableModel) tableQuanLyTaiLieu.getModel();
             dftbl.setRowCount(0); 
@@ -584,7 +584,7 @@ public void openDocument(String filePath) {
         String loai = tableQuanLyTaiLieu.getValueAt(row, 5).toString();
         int lc = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xóa tài liệu này?", "Xác nhận xóa", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (lc == JOptionPane.YES_OPTION) {
-        TaiLieuController tailieuController = new TaiLieuController();
+        TaiLieuController1 tailieuController = new TaiLieuController1();
         TaiLieu tl = new TaiLieu();
         tl.setMaTL(maTL);
         System.out.println("Document ID before adding to recycle bin: " + maTL);
@@ -621,7 +621,7 @@ public void openDocument(String filePath) {
             HienThiTaiLieu();
             return;
             }
-            TaiLieuController tailieuController=new TaiLieuController();
+            TaiLieuController1 tailieuController=new TaiLieuController1();
             ArrayList<TaiLieu> kqTimKiem=tailieuController.TimKiemTaiLieu(txtTim.getText());
             DefaultTableModel tablemodel=(DefaultTableModel) tableQuanLyTaiLieu.getModel();
             tablemodel.setRowCount(0);
@@ -653,7 +653,7 @@ public void openDocument(String filePath) {
         if (row != -1) {
         int maTaiLieu = (Integer) tableQuanLyTaiLieu.getValueAt(row, 0);  
 
-        TaiLieuController taiLieuController = new TaiLieuController();
+        TaiLieuController1 taiLieuController = new TaiLieuController1();
         String duongdan = taiLieuController.layDuongDanTaiLieu(maTaiLieu);  // Truyền mã tài liệu vào phương thức
 
         if (duongdan != null && !duongdan.isEmpty()) {
@@ -703,7 +703,7 @@ public void openDocument(String filePath) {
         String luaChon = (String) cboSapXep.getSelectedItem();
 
         // Kiểm tra lựa chọn của người dùng
-        TaiLieuController controller = new TaiLieuController();
+        TaiLieuController1 controller = new TaiLieuController1();
         ArrayList<TaiLieu> dsTaiLieu = new ArrayList<>();
 
         if (luaChon != null) {

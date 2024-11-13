@@ -4,7 +4,7 @@
  */
 package QuanLyTaiLieu.Views;
 
-import QuanLyTaiLieu.Controllers.TaiLieuController;
+import QuanLyTaiLieu.Controllers.TaiLieuController1;
 import QuanLyTaiLieu.Controllers.ThungRacController;
 import QuanLyTaiLieu.Models.TaiLieu;
 import QuanLyTaiLieu.Models.ThungRac;
